@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Collapsing Header</title>
+	<style>
+		body {
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			}
+		header {
+			height: 100px;
+			width: 100%;
+			background-color: #dbdbdb;
+			z-index: 10;
+			position: fixed;
+		}
+		#container {
+
+		}
+		#banner {
+			height: 500px;
+			width: 100%;
+			background-color: white;
+			position: fixed;
+			top: 100px;
+		}
+		#content {
+			height: 1500px;
+			width: 100%;
+			background-color: gray;
+			position: relative;
+			top: 400px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1>This is my header</h1>
+		</header>
+
+		<div id="banner">
+			<h2>This is my banner</h2>
+		</div>
+
+		<div id="content">
+			<p>Content goes here....</p>
+		</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+	<style>
+		.first {
+			width: 200px;
+			height: 700px;
+			font-size: 50px;
+			text-align: center;
+		}
+
+		/* only 2 color change */
+		.box1 {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			animation-name: rubel;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes rubel {
+			from {
+				background-color: red;
+			}
+			to {
+				background-color: black;
+			}
+		}
+
+		/* 4 background color change with different % */
+		.box2 {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			animation-name: box2;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes box2 {
+			0% {
+				background-color: red;
+			}
+			25% {
+				background-color: green;
+			}
+			50% {
+				background-color: blue;
+			}
+			100% {
+				background-color: yellow;
+			}
+			
+		}
+
+		/* box will move */
+		.box3 {
+			width: 100px;
+			height: 100px;
+			position: relative;
+			background-color: red;
+			animation-name: box3;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes box3 {
+			0% {
+				background-color: red;
+				left: 0;
+				top: 0;
+			}
+			25% {
+				background-color: green;
+				left: 200px;
+				top: 0;
+			}
+			50% {
+				background-color: blue;
+				left: 200px;
+				top: 200px;
+			}
+			75% {
+				background-color: lime;
+				left: 0;
+				top: 200px;
+			}
+			100% {
+				background-color: yellow;
+				left: 0;
+				top: 0;
+			}
+		}
+
+		/* Animation from box 4 to 6*/
+		.two {
+			height: 500px;
+			width: 500px;
+		}
+		.main {
+			height: 100px;
+			width: 100px;
+			background-color: green;
+			position: relative;
+		}
+
+		.box4 {
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+			position: absolute;
+			transition: 1s ease-in-out;
+		}
+		
+		.box5 {
+			height: 100px;
+			width: 100px;
+			background-color: lightblue;
+			position: absolute;
+			transition: 1s ease-in-out;
+		}
+		.box6 {
+			height: 100px;
+			width: 100px;
+			background-color: darkblue;
+			position: absolute;
+			transition: 1s ease-in-out;
+		}
+
+		.main:hover .box4 {
+			transform: translate(300px);
+		}
+		.main:hover .box5 {
+			transform: translate(0, 300px);
+		}
+		.main:hover .box6 {
+			transform: translate(300px, 300px);
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="first">
+		<div class="box1">1</div> <br>
+		<div class="box2">2</div> <br>
+		<div class="box3">3</div><br>
+	</div>
+
+	
+	<div class="two">
+		<main>
+			<div class="box4">4</div>
+			<div class="box5">5</div>
+			<div class="box6">6</div>
+		</main>
+	</div>
+
+</body>
+</html>
